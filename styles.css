@@ -43,6 +43,7 @@ section{
     background-size: contain;
     height: 223px;
     width: 849px;
+    z-index: 2;
 }
 .main-title{
     color: #2b2d35;
@@ -74,4 +75,11 @@ section{
 }
 .button:hover{
     background-color: #f1ff2c;
+}
+.planet{
+    width: 405px;
+    height: 330px;
+    right: 20px;
+    transform: rotate(176);
+    position: absolute;
 }
