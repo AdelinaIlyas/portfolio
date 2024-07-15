@@ -4,13 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Document</title>
 </head>
 <body>
+    <nav>
+        <div class="fixed-menu">
+            <h1 class="logo">ИА</h1>
+            <div class="nav-links">
+                <a href="#main" class="nav-link main-link active">Главная</a>
+                <a href="#about" class="nav-link about-link">Обо мне</a>
+                <a href="#skills" class="nav-link skills-link">Навыки</a>
+                <a href="#projects" class="nav-link projects-link">Работы</a>
+                <a href="#comments" class="nav-link comments-link">Отзывы</a>
+            </div>
+        </div>
+    </nav>
     <section id="main">
         <div class="main-block">
-            <img src="planet.png" class="planet">
-            <img src="maskot.png" alt="" width="125">
+            <img src="pics/planet.png" class="planet">
+            <img src="pics/maskot.png" alt="" width="125">
             <div class="main-content">
                 <h1 class="main-title">Ильяшева Аделина</h1>
                 <p class="main-subtitle">личная страница разработчика</p>
@@ -19,9 +32,12 @@
                 <a href="#">Подробнее</a>
             </div>
         </div>
+        <div class="movingPlanet">
+                
+        </div>
     </section>
     <section id="about">
-        <h1 class="">ОБО МНЕ</h1>
+        <h1 class="title">ОБО МНЕ</h1>
         <div class="about-block">
             <div class="about-content">
                 <div class="about-text">
@@ -35,37 +51,107 @@
                         <a href="#">Мои навыки</a>
                     </div>
                 </div>
-                <div class="about-card">
-                    <img src="photo.png">
-                    <p>Где живу: Москва</p>
-                    <p>Возраст: 13</p>
-                    <p>Дата рождения: 2011</p>
+            </div>
+            <div class="about-card">
+                <img src="pics/photo.png">
+                <p>Где живу: Москва</p>
+                <p>Возраст: 13</p>
+                <p>Дата рождения: 2011</p>
+            </div>
+        </div>
+        <div class="cloud">
+
+        </div>
+    </section>
+    <section id="skills">
+        <h1 class="title">НАВЫКИ</h1>
+        <div class="skills-block">
+            <div class="skills-card">
+                <p>ЭТОТ ПРОЕКТ Я СДЕЛАЛА В РАМКАХ ОБУЧЕНИЯ ШКОЛЫ ROCKET TECH SCHOOL</p>
+                <div class="languages">
+                    <img src="pics/html.png" alt="">
+                    <img src="pics/css.png" alt="">
+                    <img src="pics/js.png" alt="">
                 </div>
+                <div class="button">
+                    <a href="">смотреть работы</a>
+                </div>
+            </div>
+            <div class="movingPlanet2">
+
             </div>
         </div>
         
     </section>
-    <section id="skills">
-        <div class="skills-block">
-
-        </div>
-        
-    </section>
     <section id="projects">
+        <h1 class="title">Работы</h1>
         <div class="projects-block">
-
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="pics/project1.png"></div>
+                  <div class="swiper-slide"><img src="pics/project2.png"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            <div class="slider">
+                
+            </div>
         </div>
         
     </section>
     <section id="comments">
+        <h1 class="title">ОТЗЫВЫ</h1>
         <div class="comments-block">
-
+            <div class="comment-card">
+                <img src="pics/photo1.png">
+                <h3>Владимир</h3>
+                <p>Основатель Rocket Tech School</p>
+            </div>
+            <div class="comment">
+                <p>
+                    Эта девочка проходила обучение
+                    веб разработке 4 месяца,
+                    и уже создает сложные сайты!
+                </p>
+            </div>
+            <div class="comment-card">
+                <img src="pics/photo2.png">
+                <h3>Диана</h3>
+                <p>Product Lead Rocket Tech School</p>
+            </div>
+            <div class="comment">
+                <p>
+                    Очень хорошо пишет код.
+                    Отличная оптимизация сайта
+                    Современно, стильно, молодежно!
+                </p>
+            </div>
         </div>
         
     </section>
     <footer>
-        
+        <div class="footerText">
+            <p class="name">Ильяшева Аделина</p>
+            <p class="siteName">Личный сайт веб разработчика</p>
+        </div>
+        <p>(c) 2023</p>
+        <div class="contacts">
+            <img src="pics/Group 196.png" height="30">
+            <img src="pics/Component 16.png" height="30">
+            <img src="pics/Component 17.png" height="30">
+            <img src="pics/Component 18.png" height="30">
+        </div>
     </footer>
-    <script src="logic.js"></script>
+    <script src="pics/logic.js"></script>
+    <script src="pics/https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 </html>

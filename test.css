@@ -1,0 +1,12 @@
+@keyframes animation1{
+    from{background-color: black;}
+    to{background-color: aqua;}
+}
+.square{
+    background-color: black;
+    animation-name: animation1;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    height: 60px;
+}

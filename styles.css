@@ -3,9 +3,10 @@
 *{
     margin: 0 auto;
     font-family: 'Inter';
+    scroll-behavior: smooth;
 }
 #main{
-    background-image: url('bgMAIN.png');
+    background-image: url('pics/bgMAIN.png');
 }
 section{
     background-position: center;
@@ -15,16 +16,16 @@ section{
     position: relative;
 }
 #about{
-    background-image: url('about.png');
+    background-image: url('pics/about.png');
 }
 #skills{
-    background-image: url('bgSKILLS.png');
+    background-image: url('pics/bgSKILLS.png');
 }
 #projects{
-    background-image: url('bgWORKS.png');
+    background-image: url('pics/bgWORKS.png');
 }
 #comments{
-    background-image: url('bgCOMMENTS.png');
+    background-image: url('pics/bgCOMMENTS.png');
 }
 .main-block, .about-block, .skills-block, .projects-block, .comments-block{
     display: flex;
@@ -37,13 +38,12 @@ section{
     height: 100vh;
 }
 .main-content{
-    background-image: url('./form1.png');
+    background-image: url('pics/form1.png');
     background-repeat: no-repeat;
     padding-left: 30px;
     background-size: contain;
     height: 223px;
     width: 849px;
-    z-index: 2;
 }
 .main-title{
     color: #2b2d35;
@@ -82,4 +82,381 @@ section{
     right: 20px;
     transform: rotate(176);
     position: absolute;
+}
+@keyframes move{
+    from{
+        bottom: 10px;}
+    to{
+        bottom: 100px;}
+}
+.movingPlanet{
+    background: url(moving-planet.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    animation-name: move;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    width: 200px;
+    height: 230px;
+    transform: rotate(-15deg);
+    bottom: 10px;
+    left: 5px;
+}
+.title{
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 80px;
+    text-shadow: 5px 5px 0 black;
+}
+.about-content{
+    width: 40%;
+    height: 270px;
+    padding: 40px 0 0 40px;
+    background-color: #792AFF;
+    position: relative;
+    display: flex;
+    border-radius: 0 0 0 20px;
+    margin-right: 0;
+}
+.about-title{
+    color: #fff;
+    font-size: 20px;
+    max-width: 463px;
+    margin-bottom: 20px;
+    font-family: 'Comfortaa';
+}
+.about-card{
+    background-image: url('pics/form2.png');
+    background-repeat: no-repeat;
+    width: 376px;
+    height: 346px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    position: relative;
+    margin-left: 0;
+}
+.about-card img{
+    padding-bottom: 20px;
+}
+.about-card p{
+    color: #000;
+    font-size: 17px;
+    align-self: start;
+    padding-left: 20px;
+    line-height: 25px;
+    text-align: center;
+    font-family: 'Comfortaa';
+}
+.cloud{
+    background: url(pics/cloud.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    animation-name: move;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    width: 200px;
+    height: 230px;
+    bottom: 10px;
+    left: 5px;
+}
+.skills-card{
+    background-image: url(pics/form3.png);
+    background-repeat: no-repeat;
+    display: flex;
+    background-size: contain;
+    flex-direction: column;
+    height: 450px;
+    align-items: center;
+    margin-top: 100px;
+    margin: 20px;
+    padding-left: 10px;
+}
+.skills-card p{
+    color: #000;
+    font-size: 18px;
+    margin: 60px 0 30px 0;
+    max-width: 500px;
+    text-align: center;
+    font-family: 'Comfortaa';
+}
+.movingPlanet2{
+    background: url(pics/moving-planet2.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    animation-name: move;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    width: 208px;
+    height: 200px;
+    bottom: 10px;
+    left: 0px;
+}
+.projects-block{
+    margin-left: 17vw;
+}
+.projects-block img{
+    width: 35%;
+    height: 250px;
+    box-shadow: 7px 7px 0 black;
+}
+.comments-block{
+    justify-content: space-evenly;
+    max-width: 1150px;
+    margin: auto;
+}
+.comment-card{
+    background-image: url('pics/card.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    height: 300px;
+    max-width: 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.comment-card h3{
+    font-family: 'Comfortaa';
+    font-size: 18px;
+    padding: 10px;
+}
+.comment-card p{
+    font-family: 'Comfortaa';
+    font-size: 14px;
+    padding: 10px 20px;
+    text-align: center;
+}
+.comment{
+    background-image: url('pics/comment.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 327px;
+    height: 161px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.comment p{
+    font-family: 'Comfortaa';
+    font-size: 20px;
+    max-width: 250px;
+}
+#projects{
+    z-index: 0;
+}
+.swiper {
+    width: 55%;
+    height: 55%;
+    justify-content: center;
+  }
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+nav{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+.fixed-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    
+}
+.nav-links{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    padding-right: 150px;
+}
+.nav-link{
+    width: 112px;
+    height: 40px;
+    border-radius: 12px;
+    border: 2px solid #000;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    font-family: "Comfortaa";
+    transition-duration: 0.3s;
+}
+.active, .nav-link:hover{
+    background-color: #792AFF;
+    color: #fff;
+    transform: scale(1.2, 1.2)
+}
+.logo{
+    margin-left: 50px;
+    color: #BBFF2C;
+    font-size: 80px;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
+    left: 40px;
+    background-color: #311365;
+}
+footer p{
+    color: #fff;
+}
+.footerText{
+    display: inline;
+    color: #fff;
+}
+.name{
+    font-weight: 700;
+}
+.siteName{
+    font-weight: 400;
+}
+@media (max-width: 1000px) {
+    .nav-links{
+        display: none;
+    }
+    .logo{
+        font-size: 40px;
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+    .main-content{
+        max-width: 320px;
+    }
+    .main-title{
+        padding-top: 30px;
+        font-size: 30px;
+    }
+    .main-subtitle{
+        font-size: 15px;
+    }
+    .planet, .movingPlanet, .movingPlanet2, .cloud{
+        display: none;
+    }
+    .title{
+        font-size: 50px;
+        padding-top: 30px;
+    }
+    .about-block{
+        flex-direction: column;
+        margin-top: 20px;
+        padding: 0;
+        justify-content: center;
+    }
+    .about-card{
+        order: -1;
+        background-size: contain;
+        padding-top: 20px;
+        width: 326px;
+        height: 296px;
+        margin: 0;
+    }
+    .about-card img{
+        width: 85%;
+    }
+    .about-content{
+        width: 75%;
+        height: 250px;
+        margin-bottom: 20px;
+        margin: 0;
+    }
+    .about-title{
+        font-size: 18px;
+    }
+    .skills-card{
+        margin: 20px;
+        padding-left: 10px;
+        background-size: contain;
+    }
+    .skills-card p{
+        font-size: 16px;
+        margin-top: 15%;
+        margin-bottom: 20px;
+    }
+    .skills-block{
+        min-height: 60vh;
+    }
+    .skills-card .button{
+        position: absolute;
+        bottom: 100px;
+    }
+    .projects-block{
+        flex-direction: column;
+        padding: 20px 0;
+        justify-content: center;
+        margin: 0;
+    }
+    .projects-block img{
+        margin: 20px 0;
+        width: 80%;
+    }
+    .comments-block{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0 auto;
+        padding-top: 50px;
+    }
+    .comment{
+        background-image: url('pics/comment-mobile.png');
+    }
+    .comment p{
+        font-size: 15px;
+        max-width: 290px;
+    }
+    footer{
+        height: 200px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .footerText{
+        text-align: center;
+    }
+    .swiper{
+        width: 90%;
+        height: 90%;
+        margin-right: 50px;
+    }
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide{
+        justify-content: center;
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+    }
 }
