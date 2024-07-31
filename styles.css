@@ -82,6 +82,7 @@ section{
     right: 20px;
     transform: rotate(176);
     position: absolute;
+    z-index: -1;
 }
 @keyframes move{
     from{
@@ -90,7 +91,7 @@ section{
         bottom: 100px;}
 }
 .movingPlanet{
-    background: url(moving-planet.png);
+    background: url(pics/moving-planet.png);
     background-repeat: no-repeat;
     position: absolute;
     animation-name: move;
@@ -340,13 +341,26 @@ footer p{
 .siteName{
     font-weight: 400;
 }
+.mobile-button{
+    display: none;
+
+}
+.hide{
+    display: none;
+}
+.hide-btn{
+    display: none;
+}
+.off-scroll{
+    overflow: hidden;
+}
 @media (max-width: 1000px) {
     .nav-links{
         display: none;
     }
     .logo{
         font-size: 40px;
-        padding-left: 20px;
+        padding-left: 10px;
         padding-top: 10px;
     }
     .main-content{
@@ -385,9 +399,9 @@ footer p{
     }
     .about-content{
         width: 75%;
-        height: 250px;
+        height: 270px;
         margin-bottom: 20px;
-        margin: 0;
+        margin-right: 25px;
     }
     .about-title{
         font-size: 18px;
@@ -396,6 +410,7 @@ footer p{
         margin: 20px;
         padding-left: 10px;
         background-size: contain;
+
     }
     .skills-card p{
         font-size: 16px;
@@ -407,7 +422,8 @@ footer p{
     }
     .skills-card .button{
         position: absolute;
-        bottom: 100px;
+        bottom: 150px;
+        margin-bottom: 50px;
     }
     .projects-block{
         flex-direction: column;
@@ -458,5 +474,33 @@ footer p{
         font-size: 18px;
         display: flex;
         align-items: center;
+    }
+    .mobile-button{
+        display: inline;
+        position: absolute;
+        right: 30px;
+    }
+    .mobile-menu{
+        position: absolute;
+        width: 100%;
+        min-height: 100vh;
+        z-index: -1;
+        top: 0;
+        background-color: #200153;
+    }
+    .mobile-nav{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-self: center;
+    }
+    .mobile-nav-links .nav-link{
+        width: 210px;
+        height: 50px;
+        margin-bottom: 30px;
+    }
+    .languages img{
+        width: 60px;
     }
 }
